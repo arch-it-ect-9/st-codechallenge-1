@@ -1,0 +1,23 @@
+body {
+    font-family:arial;
+}
+form label {
+    display:block;
+    font-weight:bold;
+    color:#222;
+}
+form .submit-btn-container {
+    padding:10px;
+}
+form .input-hint {
+    font-size:10pt;
+    color:#999;
+}
+form .input-container {
+    padding:5px;
+}
+.error-message {
+    font-size: 12pt;
+    color: red;
+    padding: 10px;
+}

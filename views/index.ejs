@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/index.css"/>
+    </head>
+    <body>
+        <h2>Find the top most used words</h2>
+        <div class="error-message" <% if(!error_message) { %>style="display:none;"<% } %>><%= error_message %></div>
+        <form name="file-input-form" id="file-input-form" enctype="multipart/form-data" method="post">
+            <div class="input-container">
+
+                <label for="input-file">Choose a file</label>
+                <input type="file" id="input-file" name="input-file" accepts=".txt" >
+                <div class="input-hint">Accepts .txt files only. Max of 1GB.</div>
+    
+            </div>
+            <div class="input-container">
+
+                <label for="input-file">Number of words to return</label>
+                <input type="number" min=1 max=99 placeholder="3" id="word-count" name="word-count">
+    
+            </div>
+            <div class="submit-btn-container"><input type="submit" id="sub1" name="sub1" /></div>
+        </form>
+    </body>
+</html>

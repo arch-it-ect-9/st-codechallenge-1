@@ -109,7 +109,7 @@ Processor.prototype.mostUsedWords = function() {
             .then(() => self.uniqueWords(raw_words_array))
             .then(result => unique_words_array=result)
             .then(() => self.wordFrequencies(raw_words_array, unique_words_array))
-            .then(result => resolve(result))
+            .then(result => resolve({ frequencies: result }))
             .catch(e => reject(e));
     });
 };

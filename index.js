@@ -46,8 +46,7 @@ app.post('/', (req, res, next) => {
                 
                 var fileAnalysis = new processor(upload_path, { word_count });
                 fileAnalysis.mostUsedWords()
-                    .then(result => console.log(result))
-                    .then(() => res.send('Process complete.'))
+                    .then(result => res.json(result))
                     .catch(e => {
                         console.log(e);
                     });

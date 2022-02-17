@@ -20,6 +20,8 @@ Responses for this application are in JSON with mime type application/json. The 
 
 # Unit Test 
 
+Unit test using ```mocha``` with file test/test-doc.txt.
+
 ```cmd
  processor.js
     #mostUsedWords
@@ -42,3 +44,8 @@ Responses for this application are in JSON with mime type application/json. The 
 
   1 passing (16ms)
 ```
+
+# Other
+Other improvements to implement:
+1. Additional logging functions.
+1. JSDoc implementation.

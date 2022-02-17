@@ -1,8 +1,48 @@
 var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+const Processor = require('../processor');
+describe('processor.js', function() {
+  describe('#mostUsedWords', function() {
+    it(`Should return {
+      "frequencies": [
+          {
+              "word": "sed",
+              "count": 12
+          },
+          {
+              "word": "id",
+              "count": 10
+          },
+          {
+              "word": "sit",
+              "count": 8
+          }
+      ]
+  }`, function() {
+      var path = require('path');
+      var testdoc = path.resolve('./test/test-doc.txt');
+      console.log(testdoc);
+      var analyze = new Processor(testdoc, { word_count: 3 });
+      analyze.mostUsedWords() 
+        .then(result => assert.equal(result, {
+          "frequencies": [
+              {
+                  "word": "sed",
+                  "count": 12
+              },
+              {
+                  "word": "id",
+                  "count": 10
+              },
+              {
+                  "word": "sit",
+                  "count": 8
+              }
+          ]
+      }))
+        .catch(e => {
+          throw e;
+        });
+      
     });
   });
 });

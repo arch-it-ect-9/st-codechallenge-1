@@ -17,3 +17,28 @@ Requests are accepted using POST and take one file ```input-file``` and one inte
 
 ## Responses
 Responses for this application are in JSON with mime type application/json. The returned data will contain an object with a single property ```frequencies```. The ```frequencies``` property contains an array of key/value pairs ```words``` and ```count```. 
+
+# Unit Test 
+
+```cmd
+ processor.js
+    #mostUsedWords
+      √ Should return {
+      "frequencies": [
+          {
+              "word": "sed",
+              "count": 12
+          },
+          {
+              "word": "id",
+              "count": 10
+          },
+          {
+              "word": "sit",
+              "count": 8
+          }
+      ]
+    } 
+
+  1 passing (16ms)
+```

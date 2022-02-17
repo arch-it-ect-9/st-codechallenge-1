@@ -20,7 +20,6 @@ describe('processor.js', function() {
   }`, function() {
       var path = require('path');
       var testdoc = path.resolve('./test/test-doc.txt');
-      console.log(testdoc);
       var analyze = new Processor(testdoc, { word_count: 3 });
       analyze.mostUsedWords() 
         .then(result => assert.equal(result, {
